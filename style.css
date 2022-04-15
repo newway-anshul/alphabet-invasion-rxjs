@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: consolas, courier;
+}
+div#main {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+div.header {
+  min-height: 12vh;
+}
+div.header div.main-header {
+  text-align: center;
+  font-size: 38px;
+  color: Yellow;
+}
+div.gameInfo {
+  display: flex;
+  margin-top: 2%;
+  padding-bottom: 1%;
+}
+div.info {
+  font-size: 24px;
+  padding-left: 1.5em;
+  color: LightGreen;
+}
+div.info div.sub-info {
+  display: inline-block;
+  width: 4rem;
+}
+div.playingArea {
+  min-height: 60vh;
+  border: solid 1px #a8a8a8;
+  border-bottom: solid 5px Green;
+  position: relative;
+  background-image: linear-gradient(
+    bottom,
+    rgb(39, 54, 105) 17%,
+    rgb(1, 5, 54) 46%
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    rgb(39, 54, 105) 17%,
+    rgb(1, 5, 54) 46%
+  );
+  background-image: -ms-linear-gradient(
+    bottom,
+    rgb(39, 54, 105) 17%,
+    rgb(1, 5, 54) 46%
+  );
+  background-image: -moz-linear-gradient(
+    bottom,
+    rgb(39, 54, 105) 17%,
+    rgb(1, 5, 54) 46%
+  );
+  background-image: -webkit-linear-gradient(
+    bottom,
+    rgb(39, 54, 105) 17%,
+    rgb(1, 5, 54) 46%
+  );
+}
+div.playingArea div.letterDiv {
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  max-height: 24px;
+}
+div.footer {
+  margin-top: 2%;
+}
+div.footer div.instructions {
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+div.playingArea div.letterDiv.zoom-in-out {
+  color: red;
+  animation-name: zoomInOut;
+  transform: scale(0);
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
